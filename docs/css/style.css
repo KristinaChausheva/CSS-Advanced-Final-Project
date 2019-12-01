@@ -1,0 +1,32 @@
+@import url(reset.css);
+
+header {
+    background-color: plum;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+  
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: block;
+    margin: 1em;
+}
+
+main {
+    background-color: pink;
+}
+
+footer {
+    background-color: lightgreen;
+}
