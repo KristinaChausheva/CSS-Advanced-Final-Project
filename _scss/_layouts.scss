@@ -1,3 +1,39 @@
 body {
+    background: pink;
+}
+
+body {
     background: red;
+}
+
+
+header {
+    background-color: plum;
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+        
+        display: flex;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+
+            li {
+                display: block;
+                margin: 1em;
+            }
+        }
+    }
+}
+
+
+main {
+    background-color: pink;
+}
+
+footer {
+    background-color: lightgreen;
 }
