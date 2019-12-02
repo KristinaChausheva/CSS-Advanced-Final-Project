@@ -22,3 +22,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - node_modules
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - gulpfile.js
+   - docs
