@@ -5,26 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
-    <title>Document</title>
+    <title>{{page.title}}</title>
 </head>
 <body>
     
     <header> 
         <h2>Some header</h2>
 
-        <nav>
-            <ul>
-                <li><a href="{{ site.baseurl }}/">Index-Home</a></li>
-                <li><a href="{{ site.baseurl }}/about/">About</a></li>
-                <li><a href="{{ site.baseurl }}/services/">Services</a></li>
-                <li><a href="{{ site.baseurl }}/contacts/">Contacts</a></li>
-                    
-                
-            </ul>
-        </nav>
+       
+        {% include navigation.html location="header" %}
 
     </header>
+
     <main> {{ content }} </main>
+
     <footer>Some footer</footer>
 
 </body>
