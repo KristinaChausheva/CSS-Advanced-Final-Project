@@ -1,10 +1,11 @@
 
 title: Your awesome title
 email: k.chausheva@gmail.com
+phone-number: +359883222003
 description: A FrontEnd WannaBe.
 destination: docs
-#baseurl: "/CSS-Advanced-Final-Project"
-baseurl: ""
+baseurl: "/CSS-Advanced-Final-Project"
+#baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  KristinaChausheva
 
