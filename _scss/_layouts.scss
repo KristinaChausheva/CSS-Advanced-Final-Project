@@ -35,36 +35,13 @@ body {
 }
 
 header {
-    opacity: 1;
-    height: 3.5em;
-    //transform: translateY(-3.5em);
-    background-color: #556B2F;
-    display: flex;
-    justify-content: space-between;
-    //position: fixed;
-    z-index: 5;
-    width: 100%;
-
-    nav {
-        
-        display: flex;
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            list-style-type: none;
-
-            li {
-                display: block;
-                margin: 1em;
-            }
-        }
-    }
+  max-height: 0.5em;
+  z-index: 8;
 }
 
 main {
-  min-height: calc(100vh - #{$footer-height} - 3.5em);
-  
+  min-height: calc(100vh - #{$footer-height});
+ 
 }
 
 // Headings
@@ -75,25 +52,19 @@ h1, h2, h3 {
 
   &.lg-heading {
     font-size: 5rem;
-    margin: 1rem 0 0 0 ;
+    margin: 0 0 0.5rem 0;
+    padding: 0.2rem 1rem;
   }
 
   &.sm-heading {
-    margin: 1rem 0 0 0 ;
+    margin: 0 0 0 0 ;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
   }
 }
-
-
-
 .text-secondary {
   color: $secondary-color;
 }
-
-
-
-
 // About page layout
 .about-info {
     display: grid;
@@ -192,6 +163,9 @@ h1, h2, h3 {
 footer {
   background-color: #556B2F;
   height: $footer-height;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
   //margin-top: 10em;
   z-index: 5;
 }
