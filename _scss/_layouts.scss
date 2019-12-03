@@ -7,7 +7,7 @@ body {
     
     background: $primary-color;
     color: set-text-color($primary-color);
-    height: 100vh;
+    min-height: calc(100vh + $footer-height);
     margin: 0;
     font-family: 'Segoe UI', Verdana, sans-serif;
     line-height: 1.5;
@@ -71,7 +71,7 @@ main {
     
 }
 
-
+// About page layout
 .about-info {
     display: grid;
     grid-gap: 30px;
@@ -111,6 +111,8 @@ main {
     }
 }
 
+
+// services page layout
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -128,6 +130,36 @@ main {
   }
 }
 
+//contact page layout
+
+// Contact Page
+.boxes {
+  //display: grid;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    width: 19em;
+    border: 3px $secondary-color solid;
+    padding: 1.5rem 2.5rem;
+    margin: auto;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 1.8rem 2.8rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
 
 
 
@@ -135,4 +167,5 @@ main {
 footer {
     background-color: lightgreen;
     height: $footer-height;
+    margin-top: 4em;
 }
