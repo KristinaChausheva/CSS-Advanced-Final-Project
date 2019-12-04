@@ -35,8 +35,33 @@ body {
 }
 
 header {
-  max-height: 0.5em;
+  max-height: 6em;
   z-index: 8;
+  background-color: #556B2F;
+  opacity: 0.8;
+  
+  nav.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50vw;
+    background-color: #556B2F;
+    opacity: 0;
+    transform: translate(80%, -90%);
+    &:hover {
+      opacity: 1;
+      transform: translate(0, 0);
+      @include easeOut;
+    }
+    .menu-nav{
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      //justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 main {
