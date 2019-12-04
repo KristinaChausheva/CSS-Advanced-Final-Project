@@ -26,7 +26,7 @@ body {
       left: 0;
       bottom: 0;
       right: 0;
-      background-color:  #6B8E23;
+      background-color:  $primary-color;
       opacity: 0.8;
       z-index: -1;
     }
@@ -37,7 +37,7 @@ body {
 header {
   max-height: 6em;
   z-index: 8;
-  background-color: #556B2F;
+  background-color: $primary-color;
   opacity: 0.8;
   
   nav.menu {
@@ -51,8 +51,8 @@ header {
     //visibility: hidden;
     
     .menu-nav{
-      background-color: #556B2F;
-      visibility: hidden;
+      background-color: $primary-color;
+      //visibility: hidden;
       opacity: 0.9;
       list-style-type: none;
       display: flex;
@@ -63,13 +63,20 @@ header {
      
       a {
         text-decoration: none;
+        color: $secondary-color;
+        margin: 0.5em 0;
+        font-size: 1.5em;
+        @include easeOut;
+      }
+      a:hover {
+        font-size: 1.8em;
       }
     }
 
-    
+    /*
     .toggler:checked ~ nav.menu .menu-nav  {
       visibility: visible;
-    } 
+    } */
   }
 }
 
@@ -214,7 +221,7 @@ h1, h2, h3 {
 
 
 footer {
-  background-color: #556B2F;
+  background-color: $primary-color;
   height: $footer-height;
   padding: 0 0.5rem;
   display: flex;
