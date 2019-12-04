@@ -1,18 +1,61 @@
 // Menu Button
 .menu-btn {
     position: absolute;
-    z-index: 10;
+    z-index: 20;
     right: 35px;
     top: 35px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     @include easeOut;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-color: #556B2F;
+    
   
     .btn-line {
       width: 28px;
       height: 3px;
-      margin: 0 0 5px 0;
       background: white;
+      position: absolute;
       @include easeOut;
+      z-index: 20;
+      opacity: 1;
     }
+
+    .btn-line:before, .btn-line:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: white;
+      
+    }
+    .btn-line:before{
+      top: -8px;
+    }
+    .btn-line:after {
+      top: 8px;
+    }
+    .toggler {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      opacity: 0.4;
+    }
+    .toggler:checked + .btn-line{
+      transform: rotate(135deg);
+    }
+    .toggler:checked + .btn-line:before, .toggler:checked + .btn-line:after {
+      transform: rotate(90deg);
+      top: 0;
+    }
+   
+    
+    
+    
+    
+    
     
 }

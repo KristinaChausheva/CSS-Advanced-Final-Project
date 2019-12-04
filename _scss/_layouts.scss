@@ -46,21 +46,30 @@ header {
     right: 0;
     bottom: 0;
     width: 50vw;
-    background-color: #556B2F;
-    opacity: 0;
-    transform: translate(80%, -90%);
-    &:hover {
-      opacity: 1;
-      transform: translate(0, 0);
-      @include easeOut;
-    }
+    opacity: 1;
+    height: 100vh;
+    //visibility: hidden;
+    
     .menu-nav{
+      background-color: #556B2F;
+      visibility: hidden;
+      opacity: 0.9;
       list-style-type: none;
       display: flex;
       flex-direction: column;
-      //justify-content: center;
+      justify-content: center;
       align-items: center;
+      height: 100vh;
+     
+      a {
+        text-decoration: none;
+      }
     }
+
+    
+    .toggler:checked ~ nav.menu .menu-nav  {
+      visibility: visible;
+    } 
   }
 }
 
