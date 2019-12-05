@@ -38,16 +38,16 @@
     .btn-line:after {
       top: 8px;
     }
-    .toggler {
+    #toggler {
       width: 30px;
       height: 30px;
       position: absolute;
-      opacity: 0.4;
+      opacity: 0;
     }
-    .toggler:checked + .btn-line{
+    #toggler:checked + .btn-line{
       transform: rotate(135deg);
     }
-    .toggler:checked + .btn-line:before, .toggler:checked + .btn-line:after {
+    #toggler:checked + .btn-line:before, #toggler:checked + .btn-line:after {
       transform: rotate(90deg);
       top: 0;
     }
