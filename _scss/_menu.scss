@@ -1,54 +1,67 @@
 nav.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   ul.menu-nav {
-    display: none;
+    //position: relative;
+    top: 0;
+    visibility: hidden;
+    width: 50%;
+    height: 100vh;
+    
+   
   }
   .menu-btn {
     position: absolute;
-    //z-index: 20;
-    right: 35px;
+    right: 5px;
     top: 35px;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     @include easeOut;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    //background-color: #556B2F;
-    input[type=checkbox]{
-      display: none;
-    }
+    justify-content: center;
+    
    
     label {
+      z-index: 5;
       .btn-line {
         width: 28px;
         height: 3px;
         background: white;
-        position: absolute;
         @include easeOut;
         z-index: 5;
       }
   
-      .btn-line:before, .btn-line:after {
+      /*
+      .btn-line:before{
         content: "";
-        position: absolute;
-        width: 100%;
+        position: relative;
+        width: 28px;
         height: 3px;
+        top: 8px;
+        z-index: 5;
         background: white;
         
       }
-      .btn-line:before{
-        top: -8px;
-      }
       .btn-line:after {
-        top: 8px;
-      }
-    }
+        content: "";
+        position: relative;
+        width: 28px;
+        height: 3px;
+        top: -8px;
+        z-index: 5;
+        background: white;
+      }*/
+    } 
     
     #toggler {
       width: 30px;
       height: 30px;
-      //position: absolute;
       opacity: 1;
     }
     #toggler:checked + label > .btn-line{
@@ -58,12 +71,13 @@ nav.menu {
       transform: rotate(90deg);
       top: 0;
     }  
-  }
-  input[type=checkbox]:checked ~ ul.menu-nav {
-    display: inline-block;
-  }
-  
 
+    #toggler:checked ~ ul.menu-nav {
+      visibility: visible;
+      //transform: translateY(100px);
+      //transform: translateX(-600px);
+      //@include easeOut;
+    }
+  }
 
 }
-  
