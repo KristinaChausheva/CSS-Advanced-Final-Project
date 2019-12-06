@@ -1,7 +1,10 @@
-// Menu Button
-.menu-btn {
+nav.menu {
+  ul.menu-nav {
+    display: none;
+  }
+  .menu-btn {
     position: absolute;
-    z-index: 20;
+    //z-index: 20;
     right: 35px;
     top: 35px;
     width: 35px;
@@ -12,50 +15,55 @@
     justify-content: center;
     align-items: center;
     //background-color: #556B2F;
-    
+    input[type=checkbox]{
+      display: none;
+    }
+   
+    label {
+      .btn-line {
+        width: 28px;
+        height: 3px;
+        background: white;
+        position: absolute;
+        @include easeOut;
+        z-index: 5;
+      }
   
-    .btn-line {
-      width: 28px;
-      height: 3px;
-      background: white;
-      position: absolute;
-      @include easeOut;
-      z-index: 20;
-      opacity: 1;
+      .btn-line:before, .btn-line:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: white;
+        
+      }
+      .btn-line:before{
+        top: -8px;
+      }
+      .btn-line:after {
+        top: 8px;
+      }
     }
-
-    .btn-line:before, .btn-line:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      background: white;
-      
-    }
-    .btn-line:before{
-      top: -8px;
-    }
-    .btn-line:after {
-      top: 8px;
-    }
+    
     #toggler {
       width: 30px;
       height: 30px;
-      position: absolute;
-      opacity: 0;
+      //position: absolute;
+      opacity: 1;
     }
-    #toggler:checked + .btn-line{
+    #toggler:checked + label > .btn-line{
       transform: rotate(135deg);
     }
-    #toggler:checked + .btn-line:before, #toggler:checked + .btn-line:after {
+    #toggler:checked + label > .btn-line:before, #toggler:checked + label > .btn-line:after {
       transform: rotate(90deg);
       top: 0;
-    }
-   
-    
-    
-    
-    
-    
-    
+    }  
+  }
+  input[type=checkbox]:checked ~ ul.menu-nav {
+    display: inline-block;
+  }
+  
+
+
 }
+  
