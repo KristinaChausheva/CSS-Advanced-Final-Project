@@ -25,12 +25,27 @@
   
 // Tablets & Small Laptops  (max-width: 768px)
 @include mediaMd {
+  header {
+    position: relative;
+    top: -6em;
+    .input-and-label{
+      #toggler{
+        display: none;
+      }
+      position: relative;
+      top: 100px;
+      display: block;
+    }
+  }
+  
+ 
   main {
     align-items: center;
     text-align: center;
-  
+    
     .lg-heading {
-      line-height: 1;;
+      line-height: 1;
+      margin-top: 1em;
     }
 
     .about-info {
@@ -59,10 +74,20 @@
   
 // Smartphones (max-width: 500px)
 @include mediaSm {
+  header {
+    position: relative;
+    top: -8em;
+    label {
+      opacity: 1;
+      position: relative;
+      top: 100px;
+      display: block;
+    }
+  }
   main {
     padding: 2rem;
     .lg-heading {
-      margin-top:1rem;
+      margin-top:1em;
       font-size: 2.5rem;
     }
     .sm-heading {

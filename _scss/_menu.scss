@@ -11,9 +11,6 @@ nav.menu {
 
   
   .menu-btn {
-    
-    width: 100%;
-    height: 4em;
     cursor: pointer;
     @include easeOut;
     display: flex;
@@ -21,44 +18,27 @@ nav.menu {
     align-items: center;
     justify-content: space-between;
     //margin: 1em;
-    
+    //.input-and-label{
+     // opacity: 0;
+    //} 
    
     label {
       z-index: 5;
       .btn-line {
-        width: 28px;
-        height: 3px;
+        width: 30px;
+        margin: 5px;
+        height: 5px;
         background: white;
+        cursor: pointer;
         @include easeOut;
         z-index: 5;
       }
-  
-      /*
-      .btn-line:before{
-        content: "";
-        position: relative;
-        width: 28px;
-        height: 3px;
-        top: 8px;
-        z-index: 5;
-        background: white;
-        
-      }
-      .btn-line:after {
-        content: "";
-        position: relative;
-        width: 28px;
-        height: 3px;
-        top: -8px;
-        z-index: 5;
-        background: white;
-      }*/
     } 
     
     #toggler {
       width: 30px;
       height: 30px;
-      opacity: 1;
+      opacity: 0;
     }
     #toggler:checked + label > .btn-line{
       transform: rotate(135deg);
