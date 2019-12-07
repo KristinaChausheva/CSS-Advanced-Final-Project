@@ -35,7 +35,8 @@ body {
 }
 
 header {
-  border-bottom: $secondary-color solid 3px;
+  height: $header-height;
+  //border-bottom: $secondary-color solid 3px;
   opacity: 0.8;
   nav.menu {
     .lg-heading {

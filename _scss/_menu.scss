@@ -1,40 +1,30 @@
 nav.menu {
-  //display: flex;
-  //flex-direction: row;
-  //align-items: center;
-  //justify-content: center;
-  //height: $header-height;
-  width: 100%;
   background-color: $primary-color;
   padding: 0 2em;
-  .menu-btn {
-    cursor: pointer;
-    @include easeOut;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; 
-   
-    label {
+  width: 100vw;
+  //visibility: hidden;
+  
+  label {
+    z-index: 5;
+    position: fixed;
+    right: 35px;
+    top: 20px;
+    .btn-line {
+      width: 30px;
+      margin: 5px;
+      height: 5px;
+      background: white;
+      cursor: pointer;
+      @include easeOut;
       z-index: 5;
-      position: fixed;
-      right: 35px;
-      top: 35px;
-      .btn-line {
-        width: 30px;
-        margin: 5px;
-        height: 5px;
-        background: white;
-        cursor: pointer;
-        @include easeOut;
-        z-index: 5;
-      }
-    } 
+    }
+  } 
     
     #toggler {
       width: 30px;
       height: 30px;
       opacity: 0;
+      
     }
     #toggler:checked + label > .btn-line{
       transform: rotate(135deg);
@@ -48,30 +38,16 @@ nav.menu {
         transform: rotate(-45deg) translate(9px, -9px);
       }
     }
-    //#toggler:checked + label > .btn-line:before, #toggler:checked + label > .btn-line:after {
-     // transform: rotate(90deg);
-     // top: 0;
-    //}  
-
-    #toggler:checked + ul.menu-nav {
-      visibility: visible;
-      //transform: translateY(-16em);
-      //transform: translateX(-600px);
-      @include easeOut;
-    }
+    
     ul.menu-nav {
-      //position: relative;
-      //top: 0;
-      //visibility: hidden;
-      //width: 90%;
-      //height: 100%;
-      
+     // max-height: 2rem;
       opacity: 0.9;
       list-style-type: none;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      //visibility: hidden;
       li {
         padding: 1em;
         //margin: 0.1em;
@@ -89,6 +65,5 @@ nav.menu {
       }
       
     }
-  }
-
+  
 }

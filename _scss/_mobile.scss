@@ -1,11 +1,14 @@
 // Widescreens (min-width: 1025px) 
 @include mediaXl {
-  header {
-    .input-and-label {
-      opacity: 0;;
+  header{
+    label{
+      opacity: 0;
     }
   }
   main{
+    .lg-heading {
+      margin-top:1em;
+    }
     .boxes {
       flex-direction: row;
     }
@@ -16,12 +19,15 @@
 }
 // Desktops & Laptops (min-width: 769px) and (max-width: 1024px)
 @include mediaLg {
-  header {
-    .input-and-label {
-      opacity: 0;;
+  header{
+    label{
+      opacity: 0;
     }
   }
   main{
+    .lg-heading {
+      margin-top:1em;
+    }
     .boxes {
       flex-direction: row;
     }
@@ -34,93 +40,59 @@
   
 // Tablets & Small Laptops  (max-width: 768px)
 @include mediaMd {
-  header {
-    
-    height: 90vh;
-    font-size: 1rem;
-    
-    .menu {
-      min-height: 90vh;
-      width: 90vw;
-      
-      .menu-btn {
-        min-height: 80vh;
-        //display: flex;
-        //flex-direction: row;
-        //justify-content: center;
-        //align-items: center;
-        ul.menu-nav {
-          height: 0vh;
-          width: 100vw;
-          font-size: 1rem;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
-          justify-content: center;
-          //visibility: hidden;
-          //display: none;
-          li {
-            margin: 0 8rem;
-          }
-        }
-        .input-and-label{
-          #toggler{
-            display: none;
-          }
-        }
-      }
-    }
-    
+
+.menu {
+  min-height: $header-height;
+  
+  ul {
+    visibility: hidden;
+    opacity: 0;
+  }
+  #toggler:checked ~ ul {
+    //flex-direction: column;
+    visibility: visible;
+    @include easeOut;
+    opacity: 1;
   }
   
- 
-  main {
-    align-items: center;
-    text-align: center;
-    
-    .lg-heading {
-      line-height: 1;
-      margin-top: 1em;
-    }
-
-    .about-info {
-      grid-template-areas:
-        'bioimage bioimage bioimage'
-        'bio bio bio'
-        'job1 job1 job1'
-        'job2 job2 job2'
-        'job3 job3 job3';
-      }
-      grid-template-columns: 1fr;
-    }
-    .projects {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .boxes {
-      flex-direction: row;
-      div {
-        margin: 1em;
-      }
-      .second {
-        margin: 1em;
-      }
-    }  
 }
   
-// Smartphones (max-width: 320px)
+
+main {
+  align-items: center;
+  text-align: center;
+  
+  .lg-heading {
+    line-height: 1;
+    margin-top: 1em;
+  }
+  .about-info {
+    grid-template-areas:
+      'bioimage bioimage bioimage'
+      'bio bio bio'
+      'job1 job1 job1'
+      'job2 job2 job2'
+      'job3 job3 job3';
+    }
+    grid-template-columns: 1fr;
+  }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .boxes {
+    flex-direction: row;
+    div {
+      margin: 1em;
+    }
+    .second {
+      margin: 1em;
+    }
+  }  
+}
+  
+// Smartphones (max-width: 500px)
 @include mediaSm {
   header {
-    //position: relative;
-    //top: -8em;
-    .nav {
-      .menu-btn {
-        ul {
-          margin: 0 3em;
-          width: 90vw;
-        }
-      }
-    }
-   
     label {
       opacity: 1;
       position: relative;
