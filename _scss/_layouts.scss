@@ -30,18 +30,16 @@ body {
     opacity: 0.5;
     z-index: -1;
   }
-    
-    
 }
 
 header {
-  min-height: $header-height;
+  height: $header-height;
   background-color: $primary-color;
-  //border-bottom: $secondary-color solid 3px;
   opacity: 0.8;
   nav.menu {
+    height: $header-height;
     display: flex;
-    flex-direction: row;
+    //flex-direction: row;
     align-items: center;
     justify-content: space-between;
     .lg-heading {
@@ -57,7 +55,6 @@ main {
   min-height: calc(100vh - #{$footer-height} - #{$header-height});
   border-top: 3px solid $secondary-color;
   border-bottom: 3px solid $secondary-color;
- 
 }
 
 // Headings
