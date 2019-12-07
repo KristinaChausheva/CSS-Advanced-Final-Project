@@ -4,8 +4,8 @@ email: k.chausheva@gmail.com
 phone-number: +359883222003
 description: Front-End Dev WannaBe, AI Enthusiast, IoT Maniac
 destination: docs
-#baseurl: "/CSS-Advanced-Final-Project"
-baseurl: ""
+baseurl: "/CSS-Advanced-Final-Project"
+#baseurl: ""
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  KristinaChausheva
 

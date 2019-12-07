@@ -19,23 +19,24 @@ body {
   flex-direction: column;
   position: relative;
      
-    &:before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background-color:  $primary-color;
-      opacity: 0.8;
-      z-index: -1;
-    }
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color:  $primary-color;
+    opacity: 0.5;
+    z-index: -1;
+  }
     
     
 }
 
 header {
   border-bottom: $secondary-color solid 3px;
+  opacity: 0.8;
   nav.menu {
     .lg-heading {
       color: white;
