@@ -1,8 +1,5 @@
 nav.menu {
   background-color: $primary-color;
-  //padding: 0;
-  //width: 100vw;
-  //visibility: hidden;
   
   label {
     z-index: 5;
@@ -20,47 +17,46 @@ nav.menu {
     }
   } 
     
-    #toggler {
-      width: 30px;
-      height: 30px;
-      opacity: 0;
-      
-    }
-    #toggler:checked + label > .btn-line{
-      transform: rotate(135deg);
-      &:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-      &:nth-child(2) {
-        opacity: 0;
-      }
-      &:nth-child(3) {
-        transform: rotate(-45deg) translate(9px, -9px);
-      }
-    }
+  #toggler {
+    width: 30px;
+    height: 30px;
+    opacity: 0;
     
-    ul.menu-nav {
-      padding: 0 2em;
-      opacity: 0.9;
-      list-style-type: none;
-      display: flex;
-      //flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      li {
-        padding: 1em;
-        a {
-          text-decoration: none;
-          color: $secondary-color;
-          margin: 0.5em 0;
-          font-size: 1.5em;
-          @include easeOut;
-        }
-        a:hover {
-          font-size: 1.8em;
-        }
-      }
-      
+  }
+  #toggler:checked + label > .btn-line{
+    transform: rotate(135deg);
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
     }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg) translate(9px, -9px);
+    }
+  }
   
+  ul.menu-nav {
+    padding: 0 2em;
+    opacity: 1;
+    list-style-type: none;
+    display: flex;
+    //flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    //border-bottom: 3px solid $secondary-color;
+    li {
+      padding: 1em;
+      a {
+        text-decoration: none;
+        color: $secondary-color;
+        margin: 0.5em 0;
+        font-size: 1.5em;
+        @include easeOut;
+      }
+      a:hover {
+        font-size: 1.8em;
+      }
+    }
+  }
 }
