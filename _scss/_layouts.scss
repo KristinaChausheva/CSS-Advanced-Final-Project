@@ -35,41 +35,17 @@ body {
 }
 
 header {
-  //min-height: 6em;
-  //z-index: 8;
-  //background-color: $primary-color;
-  //opacity: 0.8;
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
-  //justify-content: center;
-  
   nav.menu {
     //display: flex;
     //flex-direction: column;
     //align-items: center;
     //justify-content: center;
-    
-    .menu-nav{
-      background-color: $primary-color;
-      opacity: 0.9;
-      list-style-type: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      
-     
-      a {
-        text-decoration: none;
-        color: $secondary-color;
-        margin: 0.5em 0;
-        font-size: 1.5em;
-        @include easeOut;
-      }
-      a:hover {
-        font-size: 1.8em;
-      }
+    margin: 1em;
+    .lg-heading {
+      color: white;
+    }
+    .text-secondary {
+      color: $secondary-color;
     }
   }
 }
