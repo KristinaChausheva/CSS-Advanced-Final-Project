@@ -11,7 +11,11 @@
 }
 // Desktops & Laptops (min-width: 769px) and (max-width: 1024px)
 @include mediaLg {
-  
+  header {
+    .input-and-label {
+      opacity: 0;;
+    }
+  }
   main{
     .boxes {
       flex-direction: row;
@@ -29,9 +33,7 @@
     position: relative;
     top: -6em;
     .input-and-label{
-      #toggler{
-        display: none;
-      }
+     
       position: relative;
       top: 100px;
       display: block;
@@ -85,7 +87,7 @@
     }
   }
   main {
-    padding: 2rem;
+    //padding: 2rem;
     .lg-heading {
       margin-top:1em;
       font-size: 2.5rem;
