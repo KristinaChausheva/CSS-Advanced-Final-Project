@@ -35,12 +35,8 @@ body {
 }
 
 header {
+  border-bottom: $secondary-color solid 3px;
   nav.menu {
-    //display: flex;
-    //flex-direction: column;
-    //align-items: center;
-    //justify-content: center;
-    margin: 1em;
     .lg-heading {
       color: white;
     }
@@ -204,6 +200,7 @@ h1, h2, h3 {
 
 
 footer {
+  border-top: $secondary-color solid 3px;
   background-color: $primary-color;
   height: $footer-height;
   padding: 0 0.5rem;
