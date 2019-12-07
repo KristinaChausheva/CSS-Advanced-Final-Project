@@ -47,6 +47,7 @@
   ul {
     visibility: hidden;
     opacity: 0;
+    font-size: 0.8em;
   }
   #toggler:checked ~ ul {
     //flex-direction: column;
@@ -93,12 +94,22 @@ main {
 // Smartphones (max-width: 500px)
 @include mediaSm {
   header {
+    height: 2 * $header-height;
     label {
       opacity: 1;
       position: relative;
       top: 100px;
       display: block;
+      .menu{
+        ul {
+          //display: flex;
+          flex-direction: column;
+          font-size: 0.6em;
+        }
+      }
     }
+    
+    
   }
   main {
     //padding: 2rem;

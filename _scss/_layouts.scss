@@ -35,10 +35,15 @@ body {
 }
 
 header {
-  height: $header-height;
+  min-height: $header-height;
+  background-color: $primary-color;
   //border-bottom: $secondary-color solid 3px;
   opacity: 0.8;
   nav.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     .lg-heading {
       color: white;
     }
@@ -50,7 +55,8 @@ header {
 
 main {
   min-height: calc(100vh - #{$footer-height} - #{$header-height});
-  //width: 100%;
+  border-top: 3px solid $secondary-color;
+  border-bottom: 3px solid $secondary-color;
  
 }
 
@@ -203,7 +209,7 @@ h1, h2, h3 {
 
 
 footer {
-  border-top: $secondary-color solid 3px;
+  //border-top: $secondary-color solid 3px;
   background-color: $primary-color;
   height: $footer-height;
   padding: 0 0.5rem;
