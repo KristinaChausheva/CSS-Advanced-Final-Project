@@ -1,12 +1,14 @@
 nav.menu {
   background-color: $primary-color;
   
+  
   label {
     z-index: 5;
-    position: fixed;
+    position: sticky;
     right: 35px;
     top: 20px;
     .btn-line {
+
       width: 30px;
       margin: 5px;
       height: 5px;
