@@ -64,18 +64,30 @@ main {
     display: inline-block;
     width: 4em;
     height: 4em;
-    fill: white;
+    fill: rgba($secondary-color, 0.8);
     @include easeOut;
-    //transition: width height 25s ease-out;
     &:hover{
-      fill: $secondary-color;
-      //width: 5em;
-      //height: 5em;
       font-size: 1.2em;
-      
     }
   }
   
+}
+ 
+.linked, .facebook{
+  &:hover {
+    fill: blue;
+  }
+}
+.tube {
+        
+  &:hover {
+    fill: red;
+  }
+}
+.git {
+  &:hover {
+    fill: black;
+  }
 }
 
 // Headings
