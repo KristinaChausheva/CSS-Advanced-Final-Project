@@ -14,7 +14,7 @@ header {
 }
 
 
-// main-border-effects
+// main-border-effects and headings
 main {
     min-height: calc(100vh - #{$footer-height} - #{$header-height});
     min-width: 100%;
@@ -65,7 +65,7 @@ main {
         animation-delay: 300ms;
         animation-fill-mode: forwards;
         transform: scale(0);
-        transform-origin: left;
+        transform-origin: 10%;
         @keyframes long-heading-load {
             0% {
                 transform: scale(0);
@@ -75,6 +75,26 @@ main {
             }
             100% {
                 transform: scale(1);
+            }
+        }
+        
+    }
+    .sm-heading {
+        animation-name: small-heading-load;
+        animation-duration: 500ms;
+        animation-timing-function: ease-in;
+        animation-delay: 300ms;
+        animation-fill-mode: forwards;
+        transform: translateX(1000%);
+        @keyframes small-heading-load {
+            0% {
+                transform: transformX(1000%);
+            }
+            90% {
+                transform: translateX(50%);
+            }
+            100% {
+                transform: translateX(0);
             }
         }
     }
