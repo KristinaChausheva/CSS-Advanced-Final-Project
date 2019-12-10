@@ -41,12 +41,8 @@
   
 // Tablets & Small Laptops  (max-width: 768px)
 @include mediaMd {
-  header {
-    
-    //height: 3 * $header-height;
-  }
+ 
   .menu {
-    //min-height: 3 * $header-height;
     flex-direction: column;
     ul {
       min-height: 10 * $header-height;
@@ -61,19 +57,28 @@
     #toggler:checked ~ ul {
       visibility: visible;
       height: 3 * $header-height;
-      @include easeOut;
-      opacity: 1;
+      animation-name: ul-load;
+      animation-duration: 500ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+      transform: translateY(-240px);
+      opacity: 0;
+      @keyframes ul-load {
+          0% {
+              transform: translateY(-240px);
+              opacity: 0;
+          }
+          100% {
+              transform: translateY(0);
+              opacity: 1;
+          }
+      }
     }
 
   }  
   main {
     align-items: center;
     text-align: center;
-
-    /*
-    .border-top-effect {
-      z-index: -1;
-    } */
 
     .lg-heading {
       line-height: 1;
@@ -106,18 +111,11 @@
   
 // Smartphones (max-width: 500px)
 @include mediaSm {
-  header {
-    //transition: height 2s;
-    //height: 3 * $header-height;
-  }
   .menu {
-    //min-height: 3 * $header-height;
     flex-direction: column;
     ul {
       min-height: 10 * $header-height;
-      //display: flex;
       flex-direction: column;
-      //align-items: flex-start;
       font-size: 1.3em;
     }
     label {
