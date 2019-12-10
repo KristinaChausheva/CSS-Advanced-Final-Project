@@ -79,10 +79,7 @@
   main {
     align-items: center;
     text-align: center;
-
-    .lg-heading {
-      line-height: 1;
-      margin-top: 1em;
+    
     }
     .about-info {
       grid-template-areas:
@@ -106,9 +103,7 @@
         margin: 1em;
       }
     }  
-  }
-
-  
+    
 // Smartphones (max-width: 500px)
 @include mediaSm {
   .menu {
