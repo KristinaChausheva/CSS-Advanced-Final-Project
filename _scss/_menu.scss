@@ -15,7 +15,7 @@ nav.menu {
       background: white;
       cursor: pointer;
       @include easeOut;
-      z-index: 5;
+      
     }
   } 
     
@@ -46,14 +46,18 @@ nav.menu {
     //flex-direction: row;
     justify-content: center;
     align-items: center;
+    //z-index: 15;
+    
     li {
       padding: 1em;
+      z-index: 20;
       a {
         text-decoration: none;
         color: $secondary-color;
         margin: 0.5em 0;
         font-size: 1.5em;
         @include easeOut;
+        z-index: 20;
       }
       a:hover {
         font-size: 1.8em;

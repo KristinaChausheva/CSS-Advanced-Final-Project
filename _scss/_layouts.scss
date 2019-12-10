@@ -55,6 +55,7 @@ main {
   min-height: calc(100vh - #{$footer-height} - #{$header-height});
   border-top: 3px solid $secondary-color;
   border-bottom: 3px solid $secondary-color;
+  z-index: -1;
   
   .icons {
     padding: 2rem 1rem;
@@ -94,7 +95,7 @@ main {
 h1, h2, h3 {
   margin: 0;
   font-weight: 400;
-  z-index: 25;
+  z-index: 0;
 
   &.lg-heading {
     font-size: 5rem;
