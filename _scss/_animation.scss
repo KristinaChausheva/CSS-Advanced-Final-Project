@@ -33,7 +33,6 @@ main {
         animation-duration: 2s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        //
         @keyframes border-anim {
             0% {left: 0;}
             100% {left: $max-width;}
