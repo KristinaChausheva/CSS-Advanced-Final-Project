@@ -8,36 +8,24 @@
   </label>
   
   <ul class="menu-nav">
-    <li class="nav-item">
-      <a href="{{ site.baseurl }}/" class="nav-link">
-        Home
-      </a>
-    </li>
-  
-    <li class="nav-item">
-      <a href="{{ site.baseurl }}/about/" class="nav-link">
-        
-        <span class="lg-heading">About</span> 
-        <span class="text-secondary">Me</span> 
-      </a>
-    </li>
-  
-    <li class="nav-item">
-      <a href="{{ site.baseurl }}/services/" class="nav-link">
-        
-        <span class="lg-heading">My</span> 
-        <span class="text-secondary">Work</span> 
-      </a>
-    </li>
-  
-    <li class="nav-item">
-      <a href="{{ site.baseurl }}/contacts/" class="nav-link">
-        
-        <span class="lg-heading">Contact</span> 
-        <span class="text-secondary">Me</span> 
-      </a>
-    </li>
+      {% assign navigation_pages = site.pages | sort:"order" %}
+    
+      {% for current_page in navigation_pages %}
+      {% if current_page.title %}
+
+      <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page{% endif %}">
+          <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
+    
+      </li>
+    
+
+    {% endif %}
+    {% endfor %}
   </ul>
 
+  
+  {% if include.location == 'header' %}
+    
+  {% endif %}
 </nav>
   
