@@ -45,7 +45,7 @@
   .menu {
     flex-direction: column;
     ul {
-      min-height: 10 * $header-height;
+      min-height: 3 * $header-height;
       width: 100%;
       transition: height 2s;
       background-color: $primary-color;
