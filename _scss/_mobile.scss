@@ -46,6 +46,7 @@
     flex-direction: column;
     ul {
       //min-height: 3 * $header-height;
+      min-height: 100%;
       width: 100%;
       transition: height 2s;
       background-color: $primary-color;
@@ -69,7 +70,7 @@
               opacity: 0;
           }
           100% {
-              transform: translateY(-150px);
+              transform: translateY(150px);
               opacity: 1;
           }
       }
