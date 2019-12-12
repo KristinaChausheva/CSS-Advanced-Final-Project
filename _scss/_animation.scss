@@ -16,8 +16,8 @@ header {
 
 // main-border-effects and headings
 main {
-    min-height: calc(100vh - #{$footer-height} - #{$header-height});
-    min-width: 100%;
+    //min-height: calc(100vh - #{$footer-height} - #{$header-height});
+    max-width: 100%;
     border-top: 3px solid #eece1a;
     border-bottom: 3px solid #eece1a;
     .border-top-effect {

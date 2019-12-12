@@ -45,7 +45,7 @@
   .menu {
     flex-direction: column;
     ul {
-      min-height: 3 * $header-height;
+      //min-height: 3 * $header-height;
       width: 100%;
       transition: height 2s;
       background-color: $primary-color;
@@ -56,7 +56,7 @@
     }
     #toggler:checked ~ ul {
       visibility: visible;
-      height: 3 * $header-height;
+      min-height: 100%;
       animation-name: ul-load;
       animation-duration: 500ms;
       animation-fill-mode: forwards;
@@ -109,7 +109,7 @@
   .menu {
     flex-direction: column;
     ul {
-      min-height: 10 * $header-height;
+      //min-height: 10 * $header-height;
       flex-direction: column;
       font-size: 1.3em;
     }
