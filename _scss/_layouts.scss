@@ -165,6 +165,11 @@ h1, h2, h3 {
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
   padding: 1em;
+  
+  a {
+    text-decoration: none;
+    color: set-text-color($primary-color);
+  }
 
   img {
     width: 100%;
