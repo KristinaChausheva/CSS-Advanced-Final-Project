@@ -28,7 +28,7 @@ main {
         //#f0e98f;
         position: absolute;
         top: $header-height;
-        left: -200px;
+        left: 0;
         animation-name: border-anim; 
         animation-duration: 2s;
         animation-timing-function: linear;
@@ -45,7 +45,7 @@ main {
         background-color: #f3e072;
         position: absolute;
         bottom: $footer-height;
-        right: -200px;
+        left: 0;
         animation-name: border-anim-bottom; 
         animation-duration: 2s;
         //animation-delay: 2s;
