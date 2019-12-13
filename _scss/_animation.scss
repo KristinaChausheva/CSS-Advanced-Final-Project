@@ -36,7 +36,7 @@ main {
         animation-direction: alternate;
         @keyframes border-anim {
             0% {left: 0;}
-            100% {right: 0;}
+            100% {left: $max-width - 200px;}
         }
     }
     .border-bottom-effect {
@@ -55,7 +55,7 @@ main {
         
         @keyframes border-anim-bottom {
             0% {left: 0;}
-            100% {right: 0;}
+            100% {left: $max-width - 200px;}
            
         }
     }
