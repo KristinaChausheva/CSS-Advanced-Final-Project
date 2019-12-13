@@ -169,6 +169,8 @@ h1, h2, h3 {
   img {
     width: 100%;
     border: 3px #fff solid;
+    height: auto;
+    overflow: hidden;
 
     &:hover {
       opacity: 0.5;
