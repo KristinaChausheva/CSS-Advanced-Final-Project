@@ -20,6 +20,7 @@ main {
     max-width: 100%;
     border-top: 3px solid #eece1a;
     border-bottom: 3px solid #eece1a;
+    /*
     .border-top-effect {
         width: 200px;
         height: 3px;
@@ -57,8 +58,8 @@ main {
             0% {left: 0;}
             100% {left: $max-width - 200px;}
            
-        }
-    }
+        } 
+    }*/
     .lg-heading {
         animation-name: long-heading-load;
         animation-duration: 500ms;
